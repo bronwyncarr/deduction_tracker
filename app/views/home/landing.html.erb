@@ -12,8 +12,12 @@
       <span>No more shoe boxes of recipets or hunting for scraps of paper.</span>
       <br>
       <br>
-      <%= link_to "Sign In", new_user_session_path, class: "btn btn-primary btn-lg" %>
-      <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+      <% if user_signed_in? %>
+        <%= link_to "Enter", deductions_path, class: "btn btn-primary btn-lg" %>
+      <% else %>
+        <%= link_to "Sign In", new_user_session_path, class: "btn btn-primary btn-lg" %>
+        <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+      <% end %>  
     </div>
   </div>
 </div>
