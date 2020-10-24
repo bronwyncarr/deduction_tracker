@@ -1,10 +1,13 @@
 class DeductionsController < ApplicationController
   before_action :set_deduction, only: [:show, :edit, :update, :destroy]
+  before_action :deductions_by_user, only: [:index, :chart]
 
   # GET /deductions
   # GET /deductions.json
   def index
-    @deductions = Deduction.all
+  end
+
+  def chart
   end
 
   # GET /deductions/1
@@ -64,6 +67,10 @@ class DeductionsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def deductions_by_user
+      @deductions = Deduction.where(user: current_user[:id])
+    end
+
     def set_deduction
       @deduction = Deduction.find(params[:id])
     end

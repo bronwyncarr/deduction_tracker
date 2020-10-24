@@ -1,0 +1,12 @@
+<h1>Chart deductions</h1>
+
+<h3>By Year</h3>
+<%= column_chart @deductions.group(:year).sum(:amount), xtitle: "Year", ytitle: "Amount ($)" %>
+<br>
+<br>
+<h3>By Category</h3>
+<%= pie_chart @deductions.group(:category).sum(:amount) %>
+<br>
+<br>
+<h3>By Expense</h3>
+<%= bar_chart @deductions.group(:expense).sum(:amount), xtitle: "Expense", ytitle: "Amount ($)" %>

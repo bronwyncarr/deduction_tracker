@@ -3,3 +3,12 @@
   height: 100%;
   object-fit: cover;
 }
+
+.jumbotron {
+  margin-bottom: 0;
+}
+
+.jumbotron .row {
+  height: calc(100vh - 184px);
+  width: 100%;
+}
