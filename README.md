@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## :bulb: About 
+This app is a tool to keep track of tax deductions each financial year.
 
-Things you may want to cover:
+It has the functionality to use basic CRUD methods with a postgreSQL database for expenses.
 
-* Ruby version
+Expenses can be viewed in a table and visually on bar and pie charts. 
 
-* System dependencies
 
-* Configuration
+## :books: Learning Outcome
 
-* Database creation
+This was devloped to practise Ruby on Rails and Bootstrap for rapidly prototyping concepts.
 
-* Database initialization
+## :clipboard: Installation
 
-* How to run the test suite
+THis app uses Ruby on Rails, PostgreSQL and the following dependancies:
+- gem 'bootstrap', '~> 4.5.2'
+- gem 'jquery-rails'
+- gem 'simple_form'
+- gem 'devise'
+- gem 'chartkick'
 
-* Services (job queues, cache servers, search engines, etc.)
+## :construction: Further development
 
-* Deployment instructions
-
-* ...
+This is a MVP but still work in progress as I continue to learn about Rails. :sparkles:
