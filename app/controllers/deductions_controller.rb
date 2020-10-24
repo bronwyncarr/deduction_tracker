@@ -25,7 +25,8 @@ class DeductionsController < ApplicationController
   # POST /deductions.json
   def create
     @deduction = Deduction.new(deduction_params)
-
+    # @deduction.user_id = current_user.id
+    
     respond_to do |format|
       if @deduction.save
         format.html { redirect_to @deduction, notice: 'Deduction was successfully created.' }
