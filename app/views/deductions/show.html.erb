@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Expense:</strong>
+  <%= @deduction.expense %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @deduction.description %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @deduction.amount %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @deduction.category %>
+</p>
+
+<%= link_to 'Edit', edit_deduction_path(@deduction) %> |
+<%= link_to 'Back', deductions_path %>
