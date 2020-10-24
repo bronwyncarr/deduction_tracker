@@ -1,37 +1,14 @@
-<%= form_with(model: deduction, local: true) do |form| %>
-  <% if deduction.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(deduction.errors.count, "error") %> prohibited this deduction from being saved:</h2>
+<%= simple_form_for(@deduction) do |f| %>
+<%= f.error_notification  %>
 
-      <ul>
-        <% deduction.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<div class="form-inputs">
+  <%= f.input :expense %>
+  <%= f.input :description %>
+  <%= f.input :amount %>
+  <%= f.input :category, collection: ["Vehicle", "Other Travel", "Clothing & Laundry", "Home office", "Self-education", "Tools/equipment", "Other work", "Charity"] %>
+</div>
 
-  <div class="field">
-    <%= form.label :expense %>
-    <%= form.text_field :expense %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :amount %>
-    <%= form.text_field :amount %>
-  </div>
-
-  <div class="field">
-    <%= form.label :category %>
-    <%= form.text_field :category %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<div class="form-action">
+  <%= f.button :submit, class: "btn btn-outline-primary" %>
+</div>
 <% end %>
