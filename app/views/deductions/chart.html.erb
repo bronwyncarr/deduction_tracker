@@ -1,4 +1,4 @@
-<h1>Chart deductions</h1>
+<h1>Deduction Charts</h1>
 
 <h3>By Year</h3>
 <%= column_chart @deductions.group(:year).sum(:amount), xtitle: "Year", ytitle: "Amount ($)" %>

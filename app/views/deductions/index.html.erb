@@ -5,11 +5,11 @@
 <table class="table table-striped">
   <thead class="thead-dark">
     <tr>
+      <th>Year</th>
       <th>Expense</th>
       <th>Description</th>
-      <th>Amount</th>
       <th>Category</th>
-      <th>Year</th>
+      <th>Amount</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,16 +17,30 @@
   <tbody>
     <% @deductions.each do |deduction| %>
       <tr>
+        <td><%= deduction.year %></td>
         <td><%= deduction.expense %></td>
         <td><%= deduction.description %></td>
-        <td><%= deduction.amount %></td>
         <td><%= deduction.category %></td>
-        <td><%= deduction.year %></td>
+        <td><%= deduction.amount %></td>
         <td><%= link_to 'Show', deduction %></td>
         <td><%= link_to 'Edit', edit_deduction_path(deduction) %></td>
         <td><%= link_to 'Destroy', deduction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+      <tr>
+      <td>Total</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>
+        <% totals = [] %>
+        <% @deductions.each do |deduction| %>
+          <% totals << deduction.amount%>
+        <% end %>
+        <%= totals.sum %>
+      </td>
+      <td colspan="3"></td>
+      </tr>
   </tbody>
 </table>
 
