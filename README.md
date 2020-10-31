@@ -5,7 +5,7 @@ This app is a tool to keep track of tax deductions each financial year.
 
 It has the functionality of CRUD methods for expenses using a postgreSQL database and AWS S3 storage.
 
-Expenses can be viewed indivudially with the receipt, summarised in a table and visually on bar and pie charts. 
+Expenses can be viewed indivually with the receipt, summarised in a table and visually on bar and pie charts. 
 
 ## :books: Learning Outcome
 
