@@ -77,6 +77,6 @@ class DeductionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def deduction_params
-      params.require(:deduction).permit(:expense, :description, :amount, :category, :year)
+      params.require(:deduction).permit(:expense, :description, :amount, :category, :year, :image)
     end
 end

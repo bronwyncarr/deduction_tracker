@@ -4,4 +4,5 @@ class Deduction < ApplicationRecord
   validates :amount, presence: true
   validates :category, presence: true
   validates :year, presence: true
+  has_one_attached :image
 end

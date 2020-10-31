@@ -20,5 +20,10 @@
   <%= @deduction.category %>
 </p>
 
+<p>
+  <strong>Copy:</strong>
+  <%= image_tag @deduction.image if @deduction.image.attached? %>
+</p>
+
 <%= link_to 'Edit', edit_deduction_path(@deduction) %> |
 <%= link_to 'Back', deductions_path %>

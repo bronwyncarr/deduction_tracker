@@ -10,18 +10,27 @@
       <th>Description</th>
       <th>Category</th>
       <th>Amount</th>
+      <th>Reciept</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @deductions.each do |deduction| %>
+    <% sorted_deductions = @deductions.sort_by { |y| y.year }%>
+    <% sorted_deductions.each do |deduction| %>
       <tr>
         <td><%= deduction.year %></td>
         <td><%= deduction.expense %></td>
         <td><%= deduction.description %></td>
         <td><%= deduction.category %></td>
         <td><%= deduction.amount %></td>
+        <td>
+          <% if deduction.image.attached? %>
+            Yes
+          <% else %>
+            No
+          <% end %>
+        </td>
         <td><%= link_to 'Show', deduction %></td>
         <td><%= link_to 'Edit', edit_deduction_path(deduction) %></td>
         <td><%= link_to 'Destroy', deduction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -38,6 +47,7 @@
           <% totals << deduction.amount%>
         <% end %>
         <%= totals.sum %>
+      <td></td>
       </td>
       <td colspan="3"></td>
       </tr>
