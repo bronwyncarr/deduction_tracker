@@ -3,10 +3,9 @@
 ## :bulb: About 
 This app is a tool to keep track of tax deductions each financial year.
 
-It has the functionality to use basic CRUD methods with a postgreSQL database for expenses.
+It has the functionality of CRUD methods for expenses using a postgreSQL database and AWS S3 storage.
 
-Expenses can be viewed in a table and visually on bar and pie charts. 
-
+Expenses can be viewed indivudially with the receipt, summarised in a table and visually on bar and pie charts. 
 
 ## :books: Learning Outcome
 
@@ -14,7 +13,7 @@ This was devloped to practise Ruby on Rails and Bootstrap for rapidly prototypin
 
 ## :clipboard: Installation
 
-THis app uses Ruby on Rails, PostgreSQL and the following dependancies:
+This app uses Ruby on Rails, PostgreSQL and the following dependancies:
 - gem 'bootstrap', '~> 4.5.2'
 - gem 'jquery-rails'
 - gem 'simple_form'
