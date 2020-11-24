@@ -1,12 +1,16 @@
 <h1>Deduction Charts</h1>
-
-<h3>By Year</h3>
-<%= column_chart @deductions.group(:year).sum(:amount), xtitle: "Year", ytitle: "Amount ($)" %>
-<br>
-<br>
-<h3>By Category</h3>
-<%= pie_chart @deductions.group(:category).sum(:amount) %>
-<br>
-<br>
-<h3>By Expense</h3>
-<%= bar_chart @deductions.group(:expense).sum(:amount), xtitle: "Expense", ytitle: "Amount ($)" %>
+<% if @deductions.present? %>
+    <h3>By Year</h3>
+    <%= column_chart @deductions.group(:year).sum(:amount), xtitle: "Year", ytitle: "Amount ($)" %>
+    <br>
+    <br>
+    <h3>By Category</h3>
+    <%= pie_chart @deductions.group(:category).sum(:amount) %>
+    <br>
+    <br>
+    <h3>By Expense</h3>
+    <%= bar_chart @deductions.group(:expense).sum(:amount), xtitle: "Expense", ytitle: "Amount ($)" %>
+<% else %>
+    <p>You have not deductions to view. Let's add some!</p>
+    <%= link_to "Add", new_deduction_path %>
+<% end %>
