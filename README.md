@@ -12,7 +12,7 @@ Initially it tracks tax deductions for each financial year. It has the functiona
 ## :books: Learning Outcome
 
 This was devloped to practise concepts learnt. Initially it includes Ruby on Rails, PostgreSQL, AWS3, Bootstrap.
-The next phase will be to incorporate JavaScript and React as I become more confortable with these technologies.
+The next phase will be to incorporate JavaScript and React as I become more comfortable with these technologies.
 
 ## :clipboard: Installation
 
