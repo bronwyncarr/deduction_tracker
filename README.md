@@ -1,7 +1,7 @@
 # TAX TIDY
 
 ## :bulb: About 
-This app is a tool to keep help people keep organised and feel confident about tax. I am an ATO tax help volunteer and it was inspired after seeing the angst and confusion some people have around tax. 
+This application is designed to be a tool to help people keep organised and feel confident about tax. I am a ATO tax help volunteer so this application idea came about after seeing the angst and confusion some people have around tax. 
 
 I will be continually working on it as I learn more about web development. 
 
